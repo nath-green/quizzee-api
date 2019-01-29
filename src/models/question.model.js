@@ -4,4 +4,4 @@ const QuestionSchema = new mongoose.Schema({
   question: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Question', RosterSchema, 'question');
+module.exports = mongoose.model('Question', QuestionSchema, 'question');
