@@ -2,20 +2,20 @@
 
 📖 A simple RESTful API for the general knowledge quiz questions.
 
-📑 The current version of the API lives at `https://path.to.api/api/v1`
+📑 The current version of the API lives at `https://quizzee-api.herokuapp.com/api/v1`
 
-⚡ API last updated on: `DD/MM/YYYY`
+⚡ API last updated on: `30/01/2018`
 
 ---
 
-### _questions_ resource
+### _question_ resource
 
-📥 `https://path.to.api/api/v1/questions`
+📥 `https://quizzee-api.herokuapp.com/api/v1/question`
 
-| #                                            | Method  | Endpoint             | Description                             | Param               |
-| -------------------------------------------- | ------- | -------------------- | --------------------------------------- | ------------------- |
-| [1](#1---get-retrieve-a-list-of-all-players) | `[GET]` | /question            | Retrieve random question(s)             | `number` (optional) |
-| [2](#2---get-retrieve-one-player)            | `[GET]` | /question/{category} | Retrieve random question(s) by category | `number` (optional) |
+| #                                                                | Method  | Endpoint             | Description                             | Param               |
+| ---------------------------------------------------------------- | ------- | -------------------- | --------------------------------------- | ------------------- |
+| [1](#user-content-1---get-retrieve-random-questions)             | `[GET]` | /question            | Retrieve random question(s)             | `number` (optional) |
+| [2](#user-content-2---get-retrieve-random-questions-by-category) | `[GET]` | /question/{category} | Retrieve random question(s) by category | `number` (optional) |
 
 If `number` param is excluded, **one** random question will be returned. The endpoints only take this parameter and should be passed an integer.
 
@@ -58,7 +58,7 @@ If `number` param is excluded, **one** random question will be returned. The end
 
 #### 1 - `[GET]` Retrieve random question(s)
 
-📥 `https://path.to.api/api/v1/questions{?number=X}`
+📥 `https://quizzee-api.herokuapp.com/api/v1/question{?number=X}`
 
 > Return a number of random questions from all categories
 
@@ -99,9 +99,9 @@ If `number` param is excluded, **one** random question will be returned. The end
 
 #### 2 - `[GET]` Retrieve random question(s) by category
 
-📥 `https://path.to.api/api/v1/questions/{category}{?number=X}`
+📥 `https://quizzee-api.herokuapp.com/api/v1/question/{category}{?number=X}`
 
-> Return a number of random questions from a [specific category](#categories-)
+> Return a number of random questions from a [specific category](#user-content-categories)
 
 ##### ✅ Example success response:
 
