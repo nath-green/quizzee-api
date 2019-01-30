@@ -4,7 +4,7 @@ exports.random = (req, res, next) => {
   const count = req.query.number ? parseInt(req.query.number) : 1;
 
   Question.aggregate([{ $sample: { size: count } }]).exec((err, data) => {
-    if (err) return res.status(400).send({ message: 'Cannot return question' });
+    if (err) return res.status(400).send({ message: 'Cannot return question(s)' });
     return res.status(200).send({ data });
   });
 };
@@ -14,7 +14,7 @@ exports.randomByCategory = (req, res, next) => {
   const { category } = req.params;
 
   Question.aggregate([{ $match: { category } }, { $sample: { size: count } }]).exec((err, data) => {
-    if (err) return res.status(400).send({ message: 'Cannot return question' });
+    if (err) return res.status(400).send({ message: 'Cannot return question(s)' });
     return res.status(200).send({ data });
   });
 };
