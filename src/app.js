@@ -12,19 +12,14 @@ const errorHandler = require('./middlewares/error-handler');
 
 const app = express();
 
-mongoose
-  .connect(
-    process.env.DB_URL,
-    { useNewUrlParser: true }
-  )
-  .then(
-    () => {
-      console.log('connection successful');
-    },
-    err => {
-      console.log(err);
-    }
-  );
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }).then(
+  () => {
+    console.log('connection successful');
+  },
+  err => {
+    console.log(err);
+  }
+);
 
 app
   .use(helmet()) // security middlewares
